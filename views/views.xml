@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+        <record model="ir.actions.act_window" id="pelicula_list_action">
+            <field name="name">Peliculas</field>
+            <field name="res_model">pelicula.modelo</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="libro_list_action">
+            <field name="name">Libros</field>
+            <field name="res_model">libro.modelo</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="heredar_list_action">
+            <field name="name">Heredar</field>
+            <field name="res_model">multimedia.heredar</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="extender_list_action">
+            <field name="name">Extender</field>
+            <field name="res_model">base.empresa</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+
+<menuitem id="main_multimedia_menu" name="multimedia definitivo"/>
+<menuitem id="multimedia_menu" name="Menu" parent="main_multimedia_menu"/>
+<menuitem id="prueba_menu" name="Peliculas" parent="multimedia_menu" action="pelicula_list_action"/>
+<menuitem id="segundo_menu" name="Libros" parent="multimedia_menu" action="libro_list_action"/>
+        <menuitem id="heredar_menu" name="Heradar" 
+                  parent="multimedia_menu" 
+                  action="heredar_list_action"/>
+        <menuitem id="extender_menu" name="Extender" 
+                  parent="multimedia_menu" 
+                  action="extender_list_action"/>
+</odoo>
